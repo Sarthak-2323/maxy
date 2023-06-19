@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://maxy-q8n0.onrender.com/', {
+    const response = await fetch('https://maxy-q8n0.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
