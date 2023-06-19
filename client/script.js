@@ -27,7 +27,6 @@ function typeText(element, text) {
         if (index < text.length) {
             element.innerHTML += text.charAt(index)
             index++
-            setTimeout(typeText, 100);
         } else {
             clearInterval(interval)
         }
@@ -87,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://maxy-q8n0.onrender.com/', {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -105,14 +104,12 @@ const handleSubmit = async (e) => {
         const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
 
         typeText(messageDiv, parsedData)
-        
     } else {
         const err = await response.text()
 
         messageDiv.innerHTML = "Something went wrong"
         alert(err)
     }
-
 }
 
 form.addEventListener('submit', handleSubmit)
