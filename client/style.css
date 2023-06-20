@@ -161,11 +161,9 @@ form img {
  }
   textarea {
   width: 100%;
-
   color: #fff;
   font-size: 18px;
-  align-items: bottom;
-  justify-content: bottom;
+  margin-top: 100%;
   padding: 10px;
   background: transparent;
   border-radius: 5px;
