@@ -151,6 +151,6 @@ form img {
 
 @media(max-width: 700px) {
   #app {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
  }
 }
