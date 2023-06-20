@@ -166,7 +166,7 @@ form img {
   padding: 10px;
   background: #40414F;
   margin-top: 100%;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: row;
   gap: 10px;
