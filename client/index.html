@@ -1,22 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maxy SR - Your AI</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="app">
-      <div id="chat_container"></div>
-
-      <form>
-        <textarea name="prompt" rows="1" cols="1" placeholder="Ask Maxy SR CREATION..."></textarea>
-        <button type="submit"><img src="assets/send.svg" alt="send" />
-      </form>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <i class='bx bxs-bot' ></i>
+      <span class="logo_name">SR Creation</span>
     </div>
+    <ul class="nav-links">
+      <li>
+        <a href="https://srcreation.netlify.app/">
+          <i class='bx bxl-spring-boot'></i>
+          <span class="link_name">Our Website</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="https://srcreation.netlify.app/">Our Website</a></li>
+        </ul>
+      </li>
 
-    <script type="module" src="script.js"></script>
-  </body>
+      <li>
+        <a href="https://srcreation.netlify.app/about.html">
+          <i class='bx bxs-user-detail'></i>
+          <span class="link_name">About Us</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="https://srcreation.netlify.app/about.html">About Us</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="https://srcreation.netlify.app/contact.html">
+          <i class='bx bx-line-chart' ></i>
+          <span class="link_name">Contact Us</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="https://srcreation.netlify.app/contact.html">Contact Us</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-phone-call' ></i>
+            <span class="link_name">Social Media</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Social Media</a></li>
+          <li><a href="https://www.instagram.com/sarthak_2007_/?igshid=YmMyMTA2M2Y%3D">Instagram</a></li>
+          <li><a href="https://www.facebook.com/sarthak.raut.5036?mibextid=ZbWKwL">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/sarthak-raut-942622274/?trk=contact-info">linkedin</a></li>
+        </ul>
+      </li>
+    
+    </div>
+  </li>
+</ul>
+  </div>
+      <div id="app">
+        <i class='bx bx-menu' ></i>
+        <div id="chat_container"></div>
+        <form>
+          <textarea name="prompt" rows="1" cols="1" placeholder="Ask Maxy SR CREATION..."></textarea>
+          <button type="submit"><img src="assets\send.svg" alt="send" />
+        </form>
+      </div>
+
+  <script src="slider.js"></script>
+
+  <script type="module" src="script.js"></script>
+
+</body>
 </html>
