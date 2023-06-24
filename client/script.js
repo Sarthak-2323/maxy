@@ -4,6 +4,9 @@ import user from './assets/user.svg'
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
+var speechSynthesis = window.speechSynthesis;
+var message = new SpeechSynthesisUtterance();
+
 let loadInterval
 
 function loader(element) {
@@ -86,7 +89,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://maxy-n0az.onrender.com', {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -101,9 +104,19 @@ const handleSubmit = async (e) => {
 
     if (response.ok) {
         const data = await response.json();
-        const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
+        const parsedData = data.bot.trim() // trims any trailing spaces/'\n'
+        
+        console.log({parsedData})
 
         typeText(messageDiv, parsedData)
+
+        function speak(text) {
+            const msg = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(msg);
+          }
+        
+          speak(parsedData);
+
     } else {
         const err = await response.text()
 
